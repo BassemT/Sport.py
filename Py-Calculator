@@ -1,0 +1,17 @@
+calculator1 = int(input("Enter your first number: "))
+calculator2 = int(input("Enter your second number: "))
+
+operetion_decider = input("Which operation would you like to choose for the last number (+,-,*,/): ")
+
+if operetion_decider == "+":
+    resulte = (calculator1+calculator2)
+elif operetion_decider == "-":
+    resulte = (calculator1-calculator2)
+elif operetion_decider == "*":
+    resulte = (calculator1*calculator2)
+elif operetion_decider == "/":
+    resulte = (calculator1/calculator2)
+else:
+    resulte = ["404 Error X|"]
+
+print(resulte) 
