@@ -1,0 +1,42 @@
+#ATM Sim
+
+pin = "6767"
+balance = 1000
+
+print("Welcome to our ATM")
+entered_pin = input("Enter your Pin: ")
+
+if entered_pin == pin:
+	print("Pin verified!")
+	
+	while True:
+		print("   ATM   ")
+		print("1. Check Balance")
+		print("2. Deposit Money")
+		print("3. Withdraw Money")
+		print("4. Cancel")
+
+		user = input("Enter your choices from 1-4: ")
+
+		if user == "1":
+			print("Your Balance is: ", balance)
+
+		elif user == "2":
+			atm = int(input("Enter the amount to deposit: "))
+			balance += atm
+			print("Money Succesfully  Deposit! This is your remaining balance in the account: ", balance)
+		
+		elif user == "3":
+			amt = int(input("Enter amount to Withdraw: "))
+			if amt <= balance:
+				balance -= amt
+				print(" Withdrawn successfully! Remaining balance: ", balance)
+		
+		elif user == "4":
+			print("Thank you for using our ATM")
+			break
+		
+		else:
+			print("Invalid choice")
+else:
+	print("Incorrect Pin!")
